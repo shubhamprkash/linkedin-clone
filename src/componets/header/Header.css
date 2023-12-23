@@ -3,7 +3,8 @@
     top: 0;
     display: flex;
     /* border: red solid 1px; */
-    justify-content: space-around;
+    background-color: white;
+    justify-content: space-evenly;
     border-bottom: 1px solid lightgray;
     padding: 10px 0;
     width: 100%;
@@ -40,6 +41,7 @@
 
 .header_search > input{
     outline: none;
+    margin-left: 6px;
     border: none;
     width: 100px;
     
