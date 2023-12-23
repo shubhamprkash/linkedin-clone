@@ -1,4 +1,4 @@
-import React , {forwardRef} from 'react'
+import React , {forwardRef, useState} from 'react'
 import './Post.css'
 import { Avatar } from '@material-ui/core'
 import InputOption from '../inputOption/InputOption.js'
@@ -10,6 +10,12 @@ import  SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 
 
 const Post = forwardRef(({name, description, message, photoUrl}, ref) => {
+
+    const [btnColor, setbtnColor] = useState("gray");
+    // function to change the icon color on click event
+    const handleButtonClick = () => {
+        setbtnColor("blue");
+    };
 
 
   return (
@@ -28,10 +34,10 @@ const Post = forwardRef(({name, description, message, photoUrl}, ref) => {
         </div>
 
         <div className="post_btns">
-            <InputOption Icon={ThumbUpAltOutlinedIcon} title={"Like"} color={"gray"}/>
-            <InputOption Icon={ChatOutlinedIcon} title={"Comment"} color={"gray"}/>
-            <InputOption Icon={ShareOutlinedIcon} title={"Share"} color={"gray"}/>
-            <InputOption Icon={SendOutlinedIcon} title={"Send"} color={"gray"}/>
+            <InputOption Icon={ThumbUpAltOutlinedIcon} title={"Like"} color={btnColor} onClick={handleButtonClick} />
+            <InputOption Icon={ChatOutlinedIcon} title={"Comment"} color={btnColor}/>
+            <InputOption Icon={ShareOutlinedIcon} title={"Share"} color={btnColor}/>
+            <InputOption Icon={SendOutlinedIcon} title={"Send"} color={btnColor}/>
         
         </div>
     </div>

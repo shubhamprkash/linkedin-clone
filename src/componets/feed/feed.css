@@ -34,7 +34,13 @@
     flex: 1;
     font-weight: 600;
 }
+.feed_input>form>input:focus{
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: #eef3f8;
+    outline: none;
 
+}
 .feed_input>form>button {
     display: none;
 }

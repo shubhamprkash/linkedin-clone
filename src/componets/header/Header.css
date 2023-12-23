@@ -44,10 +44,16 @@
     margin-left: 6px;
     border: none;
     width: 100px;
-    
+    border: none;
     background-color: transparent;
 }
-
+.header_search > input:focus{
+    outline: none;
+    border: none;
+    background-color: white;
+    border-radius:25px ;
+    padding: 5px;
+}
 .header_right{
     display: flex;
 }
