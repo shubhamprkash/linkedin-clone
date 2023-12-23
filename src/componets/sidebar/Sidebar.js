@@ -18,7 +18,7 @@ function Sidebar() {
         <img src="https://source.unsplash.com/random/?coding,city" alt="" />
         <Avatar className="sidebar_avatar" />
         <h2 id='uname'>Username</h2>
-        <h4 id='email'>exampleexample@gmail.com</h4>
+        <h4 id='email'>examplemail@gmail.com</h4>
 
       </div>
       <div className="sidebar_stat">

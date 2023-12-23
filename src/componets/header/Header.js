@@ -15,8 +15,22 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import profileImg from '../../assets/profile.png';
 
+import { useDispatch } from 'react-redux';
+import { auth } from '../../firebase.js';
+import { logout } from '../../features/userSlice.js';
+
 
 function Header() {
+
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    // logout functionality
+    dispatch(logout());
+    auth.signOut();
+
+  };
+
   return (
     <div className='header'>
         <div className="header_left">
@@ -25,7 +39,7 @@ function Header() {
             
             <div className="header_search">
                 <SearchIcon />
-                <input type="text" />
+                <input type="text" placeholder='Search' />
 
             </div>
 
@@ -38,7 +52,11 @@ function Header() {
             <HeaderOption Icon={BusinessCenterIcon} title='Jobs'></HeaderOption>
             <HeaderOption Icon={ChatIcon} title='Messaging'></HeaderOption>
             <HeaderOption Icon={NotificationsIcon} title='Notifications'></HeaderOption>
-            <HeaderOption avatar={profileImg} title='Me'></HeaderOption>
+            <HeaderOption 
+              avatar={profileImg} 
+              title='Me'
+              onClick={logoutOfApp}
+            />
 
 
 
