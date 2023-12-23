@@ -12,6 +12,7 @@ import  SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 const Post = forwardRef(({name, description, message, photoUrl}, ref) => {
 
     const [btnColor, setbtnColor] = useState("gray");
+
     // function to change the icon color on click event
     const handleButtonClick = () => {
         setbtnColor("blue");
